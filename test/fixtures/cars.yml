@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  manufacturer: MyString
+  model: MyString
+  generation_id: MyString
+  production_start: 2016-12-20
+  production_end: 2016-12-20
+  cylinder_number: 1
+  engine_capacity: 9.99
+  horse_power: 1
+  description: MyString
+
+two:
+  manufacturer: MyString
+  model: MyString
+  generation_id: MyString
+  production_start: 2016-12-20
+  production_end: 2016-12-20
+  cylinder_number: 1
+  engine_capacity: 9.99
+  horse_power: 1
+  description: MyString

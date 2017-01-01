@@ -1,0 +1,46 @@
+﻿<div ng-controller="carListCtrl">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Manufacturer</th>
+            <th>Model</th>
+            <th>Generation</th>
+            <th>Production from</th>
+            <th>Production to</th>
+            <th>Cylinders</th>
+            <th>Engine size</th>
+            <th>Power(HP)</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="row in carList">
+            <td>{{row.manufacturer}}</td>
+            <td>{{row.model}}</td>
+            <td>{{row.generationId}}</td>
+            <td>{{row.productionStart}}</td>
+            <td>{{row.productionEnd}}</td>
+            <td>{{row.cylinderNumber}}</td>
+            <td>{{row.engineCapacity}}</td>
+            <td>{{row.horsePower}}</td>
+            <td>{{row.description}}</td>
+            <td>
+                <button type="button" ng-click="updateCar(row)" class="btn btn-sm btn-danger">
+                    <i class="glyphicon glyphicon-pencil">
+                    </i>
+                </button>
+            </td>
+            <td>
+                <button type="button" ng-click="removeCar(row)" class="btn btn-sm btn-danger">
+                    <i class="glyphicon glyphicon-remove-circle">
+                    </i>
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <a type="button" class="btn btn-sm btn-success" href="/car/new">
+        <i class="glyphicon glyphicon-plus">
+        </i> Add new
+    </a>
+</div>

@@ -1,0 +1,65 @@
+<form name="updateCarForm" class="form-horizontal" ng-app="jsApp" ng-controller="updateCarCtrl">
+    <div class="form-group">
+        <h3>Update car:</h3>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="manufacturer">Manufacturer:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" ng-model="car.manufacturer" id="manufacturer"
+                   placeholder="Enter manufacturer" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="model">Model:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" ng-model="car.model" id="model" placeholder="Enter model name"
+                   required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="productionStart">Production start date:</label>
+        <div class="col-sm-10">
+            <input type="date" class="form-control" ng-model="car.productionStart" id="productionStart" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="productionEnd">Production end date:</label>
+        <div class="col-sm-10">
+            <input type="date" class="form-control" ng-model="car.productionEnd" id="productionEnd" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="cylinderNumber">Cylinders:</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" ng-model="car.cylinderNumber" id="cylinderNumber" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="engineCapacity">Engine capacity [cm3]:</label>
+        <div class="col-sm-10">
+            <input type="number" step='0.01' value='0.00' class="form-control" ng-model="car.engineCapacity"
+                   id="engineCapacity" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="horsePower">Horse power:</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" ng-model="car.horsePower" id="horsePower" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="description">Description:</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" rows="5" ng-model="car.description" id="description"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button ng-click="update()" type="submit" class="btn btn-default" ng-disabled="updateCarForm.$invalid">
+                Update
+            </button>
+        </div>
+    </div>
+</form>
+</div>
